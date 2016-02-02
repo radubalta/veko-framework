@@ -1,6 +1,6 @@
 {
-  "name": "Veko Responsive Framework",
-  "version": "v1.0.0",
+  "name": "veko-framework",
+  "version": "1.0.0",
   "description": "A front-end responsive framework.",
   "main": "gulpfile.js",
   "scripts": {
