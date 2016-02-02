@@ -1,18 +1,17 @@
 {
-  "name": "v8-framework",
-  "description": "",
+  "name": "Veko Responsive Framework",
+  "version": "v1.0.0",
+  "description": "A front-end responsive framework.",
   "main": "gulpfile.js",
-  "authors": [
-    "Radu <radubalta1891@gmail.com>"
-  ],
-  "license": "ISC",
+  "license": "MIT",
   "moduleType": [],
   "homepage": "",
+  "private": true,
   "ignore": [
     "**/.*",
     "node_modules",
-    "bower_components",
-    "test",
-    "tests"
-  ]
+    "bower_components"
+  ],
+  "dependencies": {
+  }
 }
