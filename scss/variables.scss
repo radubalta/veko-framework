@@ -1,0 +1,16 @@
+$resolutions: (
+    smallest 0  365px,
+    smaller 365px 480px,
+    small 480px 768px,
+    medium 768px 1280px,
+    large 1280px 1680px,
+    larger 1680px 1980px,
+    largest 1980px 2500px
+);
+
+$resolutions_length: length($resolutions);
+
+$divider_step: 10;
+$divider_iterations: 10;
+
+$grid_cols: 12;

@@ -1,0 +1,12 @@
+@mixin divider($key, $divider_step, $divider_iterations) {
+
+    @for $i from 1 through $divider_iterations {
+        $height: $divider_step * $i;
+
+        .divide#{$key}-#{$height} {
+            height: #{$height}px;
+        }
+    }
+}
+
+@include divider('', $divider_step, $divider_iterations);

@@ -1,0 +1,14 @@
+.hide {
+    display: none;
+}
+
+
+@mixin visibility($key, $direction) {
+    .hide-on-#{$key}#{$direction} {
+        display: none;
+    }
+
+    .show-on-#{$key}#{$direction} {
+        display: block;
+    }
+}

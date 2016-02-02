@@ -1,0 +1,23 @@
+@import "variables";
+@import "divider";
+@import "flex-grid";
+@import "visibility";
+
+@import "responsiveness";
+
+@each $resolution in $resolutions {
+    $index: index($resolutions, $resolution);
+    $key: nth($resolution, 1);
+
+    /* Down #{$key} */
+    @if $index != 1 {
+        @include media_query($resolution, $key, '-down', '(max-width:' + nth($resolution, 3) + ')')
+    }
+
+    /* Only #{$key} */
+    @include media_query($resolution, $key, '', '(min-width:' + nth($resolution, 2) + ') and (max-width:' + nth($resolution, 3) + ')')
+
+    /* Up #{$key} */
+    @include media_query($resolution, $key, '-up', '(min-width:' + nth($resolution, 2) + ')')
+
+}

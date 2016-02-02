@@ -1,0 +1,13 @@
+@mixin media_query($resolution, $key, $direction, $query) {
+
+    @media only screen and #{$query} {
+
+        @include visibility($key, $direction);
+
+        @if $direction == '' {
+            @include grid-columns($key, $grid_cols);
+        }
+        
+        @include divider('-on-#{$key}', $divider_step, $divider_iterations);
+    }
+}

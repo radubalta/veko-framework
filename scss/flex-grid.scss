@@ -1,0 +1,89 @@
+.row {
+    display: flex;
+}
+
+.col {
+    flex: 1 0 100%;
+}
+.col-half {
+    flex: 1 0 50%;
+}
+.col-third {
+    flex: 1 0 33.3%;
+}
+.col-quarter {
+    flex: 1 0 25%;
+}
+.col-fifth {
+    flex: 1 0 20%;
+}
+.col-sixth {
+    flex: 1 0 16.6%;
+}
+.col-seventh {
+    flex: 1 0 14.2%;
+}
+.col-eighth {
+    flex: 1 0 12.5%;
+}
+.col-ninth {
+    flex: 1 0 11.1%;
+}
+.col-tenth {
+    flex: 1 0 10%;
+}
+
+@for $i from 1 through $grid_cols {
+    $width: 100 / $grid_cols * $i;
+
+    .col-#{$i} {
+        width: #{$width}%;
+    }
+}
+
+@mixin grid-columns($key, $grid_cols) {
+
+    @for $i from 1 through $grid_cols {
+        $width: 100 / $grid_cols * $i;
+
+        .row .#{$key}-#{$i} {
+            width: #{$width}%;
+        }
+
+        .row .#{$key}-half {
+            flex: 1 0 50%;
+        }
+
+        .row .#{$key}-third {
+            flex: 1 0 33.3%;
+        }
+
+        .row .#{$key}-quarter {
+            flex: 1 0 25%;
+        }
+
+        .row .#{$key}-fifth {
+            flex: 1 0 20%;
+        }
+
+        .row .#{$key}-sixth {
+            flex: 1 0 16.6%;
+        }
+
+        .row .#{$key}-seventh {
+            flex: 1 0 14.2%;
+        }
+        
+        .row .#{$key}-eighth {
+            flex: 1 0 12.5%;
+        }
+
+        .row .#{$key}-ninth {
+            flex: 1 0 11.1%;
+        }
+
+        .row .#{$key}-tenth {
+            flex: 1 0 10%;
+        }
+    }
+}
